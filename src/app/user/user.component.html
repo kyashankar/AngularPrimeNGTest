@@ -1,0 +1,44 @@
+<p-table [value]="userList" [paginator]="true" [rows]="5" [rowsPerPageOptions]="[5, 10, 20]"
+    [tableStyle]="{ 'min-width': '50rem' }">
+    <p-table [value]="userList" [tableStyle]="{'min-width': '60rem'}">
+        <ng-template pTemplate="header" let-product>
+            <tr>
+                <th pSortableColumn="name" style="width:20%">
+                    Code <p-sortIcon field="product.name" />
+                </th>
+                <th pSortableColumn="username" style="width:20%">
+                    Name <p-sortIcon field="product.username" />
+                </th>
+                <th pSortableColumn="email" style="width:20%">
+                    Category <p-sortIcon field="product.email" />
+                </th>
+                <th pSortableColumn="phone" style="width:20%">
+                    Quantity <p-sortIcon field="product.phone" />
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr>
+                <td>{{ product.code }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.category }}</td>
+                <td>{{ product.quantity }}</td>
+            </tr>
+        </ng-template>
+    </p-table>    <ng-template pTemplate="header">
+        <tr>
+            <th>Name</th>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+        <tr>
+            <td>{{ product.name }}</td>
+            <td>{{ product.username }}</td>
+            <td>{{ product.email }}</td>
+            <td>{{ product.phone }}</td>
+        </tr>
+    </ng-template>
+</p-table>

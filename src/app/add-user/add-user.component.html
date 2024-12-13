@@ -1,0 +1,10 @@
+<table style="width:100%">
+    <tr>
+        <td>
+            <p-dropdown [(ngModel)]="selectCity" [options]="cities" [filter]="true" optionLabel="name" optionValue="code" placeholder="Select a City"></p-dropdown>
+        </td>
+        <td>
+            {{selectCity}}
+        </td>
+    </tr>
+</table>
